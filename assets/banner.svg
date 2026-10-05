@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 44px; fill: url(#text-grad); }
+    .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+    .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 13px; fill: #e2e8f0; }
+    
+    /* Dynamic Animated Background Elements */
+    .pulse-circle { animation: pulse 4s ease-in-out infinite alternate; }
+    .float-node { animation: float 6s ease-in-out infinite alternate; }
+    .dash-line { stroke-dasharray: 8 8; animation: dash 20s linear infinite; }
+
+    @keyframes pulse {
+      0% { r: 150px; opacity: 0.3; }
+      100% { r: 280px; opacity: 0.7; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-12px); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -1000; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Background Glow & Animated Circles (Behind Everything) -->
+  <circle cx="600" cy="160" r="220" fill="url(#glow)" class="pulse-circle" />
+  
+  <!-- Dynamic Distributed Graph Mesh Network (Background Layer) -->
+  <g stroke="#334155" stroke-width="1.5" opacity="0.4" class="float-node">
+    <line x1="100" y1="80" x2="250" y2="140" class="dash-line"/>
+    <line x1="250" y1="140" x2="180" y2="250" class="dash-line"/>
+    <line x1="1000" y1="70" x2="920" y2="180" class="dash-line"/>
+    <line x1="920" y1="180" x2="1050" y2="260" class="dash-line"/>
+    <line x1="250" y1="140" x2="400" y2="70" stroke="#475569"/>
+    <line x1="920" y1="180" x2="800" y2="250" stroke="#475569"/>
+  </g>
+
+  <!-- Background Node Dots -->
+  <g opacity="0.6">
+    <circle cx="100" cy="80" r="6" fill="#38bdf8"/>
+    <circle cx="250" cy="140" r="8" fill="#818cf8"/>
+    <circle cx="180" cy="250" r="6" fill="#c084fc"/>
+    <circle cx="1000" cy="70" r="7" fill="#38bdf8"/>
+    <circle cx="920" cy="180" r="9" fill="#c084fc"/>
+    <circle cx="1050" cy="260" r="6" fill="#818cf8"/>
+  </g>
+
+  <!-- Foreground Content (Guaranteed Unobscured Title & Subtitle) -->
+  <g text-anchor="middle" filter="url(#shadow)">
+    <!-- Icon/Logo Header -->
+    <g transform="translate(600, 68)">
+      <path d="M-20 -12 C-20 -20 20 -20 20 -12 C20 -4 -20 -4 -20 -12 Z M-20 -12 L-20 12 C-20 20 20 20 20 12 L20 -12 M-20 0 C-20 8 20 8 20 0" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="-2" r="3" fill="#38bdf8"/>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="145" class="title">Awesome Distributed NoSQL Database</text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="188" class="subtitle">A Curated List of Distributed NoSQL, Multi-Model, Key-Value, Document, Graph &amp; Vector Databases</text>
+
+    <!-- Feature Pills / Badges in Banner -->
+    <g transform="translate(600, 235)">
+      <!-- Pill 1 -->
+      <g transform="translate(-270, 0)">
+        <rect x="-70" y="-16" width="140" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="0" y="5" class="badge-text" text-anchor="middle">⚡ High Availability</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(-90, 0)">
+        <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+        <text x="0" y="5" class="badge-text" text-anchor="middle">🌐 Global Scale</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(90, 0)">
+        <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+        <text x="0" y="5" class="badge-text" text-anchor="middle">🔍 Vector &amp; Graph</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(270, 0)">
+        <rect x="-70" y="-16" width="140" height="32" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <text x="0" y="5" class="badge-text" text-anchor="middle">☁️ SaaS &amp; OSS</text>
+      </g>
+    </g>
+  </g>
+</svg>
