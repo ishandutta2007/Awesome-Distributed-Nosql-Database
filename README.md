@@ -56,9 +56,9 @@ Below is a curated comparison of leading fully-managed NoSQL SaaS products, sort
 
 ## 🔓 Open-Source GitHub Projects
 
-Below is a curated list of top open-source distributed NoSQL databases, sorted in descending order by **GitHub Star Count**:
+Below is a curated list of top open-source distributed NoSQL databases, sorted in descending order by **GitHub Stars_Count**:
 
-| Repo | Description | License | Star Count & Stargazers Badge 🔽 |
+| Repo | Description | License | Stars_Count & Stargazers Badge 🔽 |
 | :--- | :--- | :--- | :--- |
 | **[Redis](https://github.com/redis/redis)** 🔴 | In-memory data structure store used as a database, cache, streaming engine, and message broker. | BSD-3-Clause | [<img src="https://img.shields.io/github/stars/redis/redis?style=social&color=white" alt="Redis Stars"/>](https://github.com/redis/redis/stargazers) |
 | **[TiDB](https://github.com/pingcap/tidb)** 💡 | Open-source distributed HTAP database compatible with MySQL protocol, delivering real-time OLTP/OLAP capabilities. | Apache-2.0 | [<img src="https://img.shields.io/github/stars/pingcap/tidb?style=social&color=white" alt="TiDB Stars"/>](https://github.com/pingcap/tidb/stargazers) |
